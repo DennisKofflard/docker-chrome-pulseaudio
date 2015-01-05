@@ -31,7 +31,7 @@ ADD id_rsa.pub /home/chrome/.ssh/authorized_keys
 RUN chown -R chrome:chrome /home/chrome/.ssh
 
 # Set up the launch wrapper
-RUN echo 'export PULSE_SERVER="tcp:localhost:64713"' >> /usr/local/bin/chrome-pulseaudio-forward
+RUN echo 'export PULSE_SERVER="tcp:192.168.1.200:64713"' >> /usr/local/bin/chrome-pulseaudio-forward
 RUN echo 'google-chrome --no-sandbox' >> /usr/local/bin/chrome-pulseaudio-forward
 RUN chmod 755 /usr/local/bin/chrome-pulseaudio-forward
 

@@ -1,37 +1,16 @@
+Forked from:
+https://github.com/jlund/docker-chrome-pulseaudio
+
 Docker! Chrome! PulseAudio!
 ===========================
 
 Run Google Chrome inside an isolated [Docker](http://www.docker.io) container on your Linux desktop! See its sights via X11 forwarding! Hear its sounds through the magic of PulseAudio and SSH tunnels!
 
 
-Instructions
+Short instructions
 ============
 
-1. Install [PulseAudio Preferences](http://freedesktop.org/software/pulseaudio/paprefs/). Debian/Ubuntu users can do this:
-
-        sudo apt-get install paprefs
-
-1. Launch PulseAudio Preferences, go to the "Network Server" tab, and check the "Enable network access to local sound devices" checkbox
-
-1. Restart PulseAudio
-
-        sudo service pulseaudio restart
-
-   On some distributions, it may be necessary to completely restart your computer. You can confirm that the settings have successfully been applied using the `pax11publish` command. You should see something like this (the important part is in bold):
-
-   > Server: {ShortAlphanumericString}unix:/run/user/1000/pulse/native **tcp:YourHostname:4713 tcp6:YourHostname:4713**
-
-   > Cookie: ReallyLongAlphanumericString
-
-1. [Install Docker](http://docs.docker.io/en/latest/installation/) if you haven't already
-
-1. Clone this repository and get right in there
-
-        git clone https://github.com/jlund/docker-chrome-pulseaudio.git && cd docker-chrome-pulseaudio
-
-1. Generate an SSH public key, if you don't already have one
-
-        ssh-keygen
+1. Set the pulseserver in the launch script
 
 1. Copy your SSH public key into place
 
@@ -61,8 +40,16 @@ Instructions
 1. Go watch Hulu, or whatever
 
 
+
+
+
+
+
+
+
 Frequently Asked Questions
 ==========================
+<unmodified>
 
 Why would I want to do this?
 ----------------------------
